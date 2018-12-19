@@ -68,17 +68,3 @@ class DoubleLinkedList:
                 ret_list.append(current_node)
                 current_node = current_node.next()
 
-
-class LRUCache:
-    def __init__(self, max_size):
-        self.max_size = max_size
-        self.current_size = 0
-        self.key_to_node_dict = {}
-        self.double_list = DoubleLinkedList()
-
-    def get(self, key):
-        self.
-
-
-    def put(self, key, value):
-
