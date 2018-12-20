@@ -42,3 +42,15 @@ def matching_brackets(str):
     return False
 
 
+def movie_minutes(pair_lst):
+    # O(3n)
+    # one valid pair_list:  [(0,10), (5, 25), (40, 55)]
+    duration = 0
+    for start, end in pair_lst:
+        if end > duration:
+            duration = end
+    watched = [0] * duration
+    for start, end in pair_lst:
+        watched[start:end] = [1]*(end-start)
+    return sum(watched)
+

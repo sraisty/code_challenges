@@ -26,7 +26,6 @@ class DoubleLinkedList:
     def remove_last_node(self):
         last = self.tail.prev
         self.unlink(last)
-        del(last)
 
 
 class LRUCache:
@@ -51,7 +50,7 @@ class LRUCache:
             self.double_list.add_to_front(node)
             return node.value
         # key wasn't in the cache
-        return -1
+        return None
 
     def put(self, key, value):
         """
